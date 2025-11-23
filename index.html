@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FuCha Yiming — Creative Developer</title>
+
+    <style>
+        /* -------------------------
+           BASIC RESET
+        ------------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Inter, Roboto, sans-serif;
+            background: #fafafa;
+            color: #111;
+            line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* -------------------------
+           GLOBAL LAYOUT
+        ------------------------- */
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        /* -------------------------
+           HERO SECTION
+        ------------------------- */
+        .hero {
+            padding: 100px 0;
+            text-align: left;
+            animation: fadeIn 1.2s ease;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            max-width: 650px;
+            opacity: 0.8;
+        }
+        .hero-buttons {
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: 8px;
+            margin-right: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .btn-primary {
+            background: #111;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #333;
+        }
+        .btn-outline {
+            border: 2px solid #111;
+        }
+        .btn-outline:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        /* -------------------------
+           SECTION
+        ------------------------- */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .section-text {
+            opacity: 0.8;
+            max-width: 750px;
+            font-size: 1.05rem;
+        }
+
+        /* -------------------------
+           PROJECT CARDS
+        ------------------------- */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            margin-top: 30px;
+        }
+        @media(min-width: 800px) {
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 24px;
+            border-radius: 12px;
+            transition: 0.2s;
+            background: #fff;
+        }
+        .project-card:hover {
+            border-color: #111;
+            transform: translateY(-3px);
+        }
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .project-desc {
+            opacity: 0.75;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+        .project-tags {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* -------------------------
+           FOOTER
+        ------------------------- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* -------------------------
+           ANIMATION
+        ------------------------- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===============================
+         HERO SECTION
+    ================================ -->
+    <div class="container hero">
+        <h1>FuCha Yiming</h1>
+        <p>
+            Creative Developer specializing in Unity, Three.js, WebGL, XR, and AI-driven experiences.  
+            I build real-time 3D systems, interactive interfaces, and intelligent digital tools.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-outline">Download Resume</a>
+        </div>
+    </div>
+
+    <!-- ===============================
+         ABOUT SECTION
+    ================================ -->
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">
+                I’m a creative developer with 6+ years of experience across Unity, WebGL,  
+                real-time 3D systems, XR, and AI/LLM engineering.  
+                I build immersive interactive experiences, data-driven systems,  
+                and intelligent tools that combine engineering precision  
+                with design-driven thinking.
+            </p>
+        </section>
+    </div>
+
+    <!-- ===============================
+         PROJECT SECTION
+    ================================ -->
+    <div class="container">
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <div class="project-title">Unity Open-World Interaction System</div>
+                    <div class="project-desc">
+                        Real-time quest, minimap, dialogue, and interaction system built in Unity.
+                    </div>
+                    <div class="project-tags">Unity · C# · Gameplay Systems</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">3D AR Dental 6DoF Tracking</div>
+                    <div class="project-desc">
+                        High-precision tooth tracking and mesh overlay alignment.
+                    </div>
+                    <div class="project-tags">Unity · Computer Vision · AR</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Health-HCI PhD Agent</div>
+                    <div class="project-desc">
+                        AI-powered global HCI/Health PhD search + daily aggregation tool.
+                    </div>
+                    <div class="project-tags">AI · Python · Automation</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">WebGL Interaction Demo</div>
+                    <div class="project-desc">
+                        Three.js / WebGL experiences with real-time interaction logic.
+                    </div>
+                    <div class="project-tags">Three.js · WebGL · UX</div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- ===============================
+         CONTACT SECTION
+    ================================ -->
+    <div class="container">
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-text">
+                Interested in working together?  
+                Feel free to reach out.
+            </p>
+
+            <p class="section-text" style="margin-top:20px;">
+                ✉ Email: <b>contact@yimingfucha.com</b><br>
+                🔗 LinkedIn: <b>linkedin.com/in/yimingfucha</b>
+            </p>
+        </section>
+    </div>
+
+    <!-- ===============================
+         FOOTER
+    ================================ -->
+    <footer>
+        Designed & Built by FuCha Yiming · © 2025
+    </footer>
+
+</body>
+</html>
